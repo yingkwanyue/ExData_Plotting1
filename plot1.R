@@ -19,7 +19,7 @@ power_data_sub$DateTime <- strptime(paste(power_data_sub$Date, power_data_sub$Ti
 power_data_sub <- mutate_at(power_data_sub, names(power_data_sub[3:9]), as.numeric)
 
 # Plot histogram
-png(file = "plot1.png")
+png(file = "plot1.png", width = 480, height = 480)
 par(mfrow = c(1, 1))
 hist(power_data_sub$Global_active_power, 
      main = "Global Active Power",

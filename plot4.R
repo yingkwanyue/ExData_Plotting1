@@ -19,7 +19,7 @@ power_data_sub$DateTime <- strptime(paste(power_data_sub$Date, power_data_sub$Ti
 power_data_sub <- mutate_at(power_data_sub, names(power_data_sub[3:9]), as.numeric)
 
 # Plot line graph
-png(file = "plot4.png")
+png(file = "plot4.png", width = 480, height = 480)
 par(mfrow = c(2, 2))
 plot(power_data_sub$DateTime, power_data_sub$Global_active_power,
      xlab = "",

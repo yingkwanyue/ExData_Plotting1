@@ -19,7 +19,7 @@ power_data_sub$DateTime <- strptime(paste(power_data_sub$Date, power_data_sub$Ti
 power_data_sub <- mutate_at(power_data_sub, names(power_data_sub[3:9]), as.numeric)
 
 # Plot line graph
-png(file = "plot3.png")
+png(file = "plot3.png", width = 480, height = 480)
 par(mfrow = c(1, 1))
 with(power_data_sub, {
         plot(DateTime, Sub_metering_1,
